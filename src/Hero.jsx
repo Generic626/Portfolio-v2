@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import {
   useMotionTemplate,
@@ -14,6 +14,9 @@ const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export const Hero = () => {
   const color = useMotionValue(COLORS_TOP[0]);
+  const [hasEntered, setHasEntered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ top: 0, bottom: 0 });
+  const MOUSE_OFFSET = { top: 20, left: 50 };
 
   useEffect(() => {
     animate(color, COLORS_TOP, {
@@ -30,6 +33,12 @@ export const Hero = () => {
     window.open(url, "_blank");
   };
 
+  useEffect(() => {
+    console.log(mousePosition);
+  }, [mousePosition]);
+
+  const imageRef = useRef(null);
+
   return (
     <motion.section
       style={{
@@ -38,9 +47,36 @@ export const Hero = () => {
       className="h-full w-full p-4 flex flex-col justify-center items-center"
     >
       {/* Avatar Image */}
-
-      <div className="border-[4px] border-white rounded-[50%] w-[200px] h-[200px] bg-highlight flex justify-center items-center">
+      <div
+        ref={imageRef}
+        onMouseEnter={() => {
+          setHasEntered(true);
+        }}
+        onMouseLeave={() => {
+          setHasEntered(false);
+        }}
+        onMouseMove={(e) => {
+          if (hasEntered) {
+            setMousePosition({
+              top: e.clientY - imageRef.current.offsetTop + MOUSE_OFFSET.top,
+              left: e.clientX - imageRef.current.offsetLeft - MOUSE_OFFSET.left,
+            });
+          }
+        }}
+        className="relative cursor-pointer border-[4px] border-white rounded-[50%] w-[200px] h-[200px] bg-highlight flex justify-center items-center"
+      >
         <img src="/avatar.png" />
+        {hasEntered && (
+          <div
+            style={{
+              top: mousePosition.top,
+              left: mousePosition.left,
+            }}
+            className="absolute bg-white text-black text-center text-lg w-[130px] rounded-lg "
+          >
+            Hello There 👋
+          </div>
+        )}
       </div>
 
       {/* Title */}
