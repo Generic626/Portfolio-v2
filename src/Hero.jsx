@@ -38,13 +38,19 @@ export const Hero = () => {
       className="h-full w-full p-4 flex flex-col justify-center items-center"
     >
       {/* Avatar Image */}
+
       <div className="border-[4px] border-white rounded-[50%] w-[200px] h-[200px] bg-highlight flex justify-center items-center">
         <img src="/avatar.png" />
       </div>
+
       {/* Title */}
       <div className="text-center mt-4">
-        <h1 className="text-6xl mt-4 font-normal">My Name is Matthew</h1>
-        <h2 className="text-2xl mt-4 font-thin">And I&apos;m a developer</h2>
+        <h1 className="text-4xl md:text-6xl mt-4 font-normal">
+          My Name is Matthew
+        </h1>
+        <h2 className="text-xl md:text-2xl mt-2 md:mt-4 font-thin">
+          And I&apos;m a developer
+        </h2>
         {/* Get Resume */}
         <motion.button
           whileHover={{ y: -3 }}
