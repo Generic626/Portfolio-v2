@@ -72,7 +72,7 @@ export const Hero = () => {
               top: mousePosition.top,
               left: mousePosition.left,
             }}
-            className="absolute bg-white text-black text-center text-lg w-[130px] rounded-lg "
+            className="absolute bg-white text-black text-center py-1 text-xl w-[80%] rounded-lg "
           >
             Hello There 👋
           </div>
