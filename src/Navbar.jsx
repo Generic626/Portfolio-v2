@@ -6,7 +6,7 @@ const Navbar = () => {
         MATTHEW.DEV
       </span>
       {/* Nav Items */}
-      <div className="hidden md:flex gap-8 uppercase">
+      <div className="hidden lg:flex gap-8 uppercase">
         <span className="text-zinc-400 cursor-pointer">About Me</span>
         <span className="text-zinc-400 cursor-pointer">Skill Set</span>
         <span className="text-zinc-400 cursor-pointer">Experience</span>

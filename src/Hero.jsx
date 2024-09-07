@@ -45,10 +45,10 @@ export const Hero = () => {
 
       {/* Title */}
       <div className="text-center mt-4">
-        <h1 className="text-4xl md:text-6xl mt-4 font-normal">
+        <h1 className="text-4xl lg:text-6xl mt-4 font-normal">
           My Name is Matthew
         </h1>
-        <h2 className="text-xl md:text-2xl mt-2 md:mt-4 font-thin">
+        <h2 className="text-xl lg:text-2xl mt-2 lg:mt-4 font-thin">
           And I&apos;m a developer
         </h2>
         {/* Get Resume */}
@@ -63,7 +63,7 @@ export const Hero = () => {
           </div>
         </motion.button>
         {/* Social Icons */}
-        <div className="flex gap-4 justify-center items-center mt-8">
+        <div className="flex gap-4 justify-center items-center mt-6">
           <BsGithub
             className="size-[35px] cursor-pointer"
             onClick={() => {
