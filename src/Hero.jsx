@@ -53,9 +53,9 @@ export const Hero = () => {
         </h2>
         {/* Get Resume */}
         <motion.button
-          whileHover={{ y: -3 }}
-          whileTap={{ y: 3 }}
-          className="inline bg-primary-dark rounded-full py-2 px-4 mt-4 shadow-lg"
+          whileHover={{ y: -5 }}
+          whileTap={{ y: 5 }}
+          className="inline bg-primary-light rounded-full py-2 px-4 mt-4 shadow-lg"
         >
           <div className="flex justify-center items-center gap-2">
             <span>Get My Resume</span>
