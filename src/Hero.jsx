@@ -67,7 +67,13 @@ export const Hero = () => {
       >
         <img src="/avatar.png" />
         {hasEntered && (
-          <div
+          <motion.div
+            initial={{
+              scale: 0,
+            }}
+            animate={{
+              scale: 1,
+            }}
             style={{
               top: mousePosition.top,
               left: mousePosition.left,
@@ -75,7 +81,7 @@ export const Hero = () => {
             className="absolute bg-white text-black text-center py-1 text-xl w-[80%] rounded-lg "
           >
             Hello There 👋
-          </div>
+          </motion.div>
         )}
       </div>
 
@@ -85,7 +91,7 @@ export const Hero = () => {
           My Name is Matthew
         </h1>
         <h2 className="text-xl lg:text-2xl mt-2 lg:mt-4 font-thin">
-          And I&apos;m a developer
+          And I&apos;m a developer.
         </h2>
         {/* Get Resume */}
         <motion.button

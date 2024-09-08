@@ -7,6 +7,7 @@ export default {
         primary: "#051931",
         "primary-light": "#0A315f",
         highlight: "#EDFF00",
+        "backdrop-white": "#cccccc",
       },
     },
   },

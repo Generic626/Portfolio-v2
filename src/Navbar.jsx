@@ -8,7 +8,6 @@ const Navbar = () => {
       {/* Nav Items */}
       <div className="hidden lg:flex gap-8 uppercase">
         <span className="text-zinc-400 cursor-pointer">About Me</span>
-        <span className="text-zinc-400 cursor-pointer">Skill Set</span>
         <span className="text-zinc-400 cursor-pointer">Experience</span>
         <span className="text-zinc-400 cursor-pointer">Projects</span>
         <span className="text-zinc-400 cursor-pointer">Let&apos;s Connect</span>
