@@ -65,7 +65,7 @@ export const Hero = () => {
         }}
         className="relative cursor-pointer border-[4px] border-white rounded-[50%] w-[200px] h-[200px] bg-highlight flex justify-center items-center"
       >
-        <img src="/avatar.png" />
+        <img src="/assets/avatar.png" />
         {hasEntered && (
           <motion.div
             initial={{
@@ -78,7 +78,7 @@ export const Hero = () => {
               top: mousePosition.top,
               left: mousePosition.left,
             }}
-            className="absolute bg-white text-black text-center py-1 text-xl w-[80%] rounded-lg "
+            className="absolute bg-white text-black text-center py-2 text-xl w-[80%] rounded-full "
           >
             Hello There 👋
           </motion.div>
@@ -93,27 +93,17 @@ export const Hero = () => {
         <h2 className="text-xl lg:text-2xl mt-2 lg:mt-4 font-thin">
           And I&apos;m a developer.
         </h2>
-        {/* Get Resume */}
-        <motion.button
-          whileHover={{ y: -5 }}
-          whileTap={{ y: 5 }}
-          className="inline bg-primary-light rounded-full py-2 px-4 mt-4 shadow-lg"
-        >
-          <div className="flex justify-center items-center gap-2">
-            <span>Get My Resume</span>
-            <GoDownload />
-          </div>
-        </motion.button>
+
         {/* Social Icons */}
         <div className="flex gap-4 justify-center items-center mt-6">
           <BsGithub
-            className="size-[35px] cursor-pointer"
+            className="size-[30px] cursor-pointer"
             onClick={() => {
               handleSocialOnClick("https://github.com/Generic626");
             }}
           />
           <FaLinkedin
-            className="size-[35px] cursor-pointer"
+            className="size-[30px] cursor-pointer"
             onClick={() => {
               handleSocialOnClick(
                 "https://www.linkedin.com/in/matthew-tze-ken-fung-01736b270/"
@@ -121,6 +111,18 @@ export const Hero = () => {
             }}
           />
         </div>
+
+        {/* Get Resume */}
+        <motion.button
+          whileHover={{ y: -5 }}
+          whileTap={{ y: 5 }}
+          className="inline bg-primary-light rounded-full py-2 px-4 mt-6 shadow-lg"
+        >
+          <div className="flex justify-center items-center gap-2">
+            <span>Get My Resume</span>
+            <GoDownload />
+          </div>
+        </motion.button>
       </div>
     </motion.section>
   );
