@@ -33,10 +33,6 @@ export const Hero = () => {
     window.open(url, "_blank");
   };
 
-  useEffect(() => {
-    console.log(mousePosition);
-  }, [mousePosition]);
-
   const imageRef = useRef(null);
 
   return (
