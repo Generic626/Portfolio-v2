@@ -41,6 +41,7 @@ export const Hero = () => {
 
   return (
     <motion.section
+      id="hero"
       style={{
         backgroundImage,
       }}
@@ -97,13 +98,13 @@ export const Hero = () => {
         {/* Social Icons */}
         <div className="flex gap-4 justify-center items-center mt-6">
           <BsGithub
-            className="size-[30px] cursor-pointer"
+            className="size-[30px] cursor-pointer text-zinc-400 hover:text-white ease-linear duration-150"
             onClick={() => {
               handleSocialOnClick("https://github.com/Generic626");
             }}
           />
           <FaLinkedin
-            className="size-[30px] cursor-pointer"
+            className="size-[30px] cursor-pointer text-zinc-400 hover:text-white ease-linear duration-150"
             onClick={() => {
               handleSocialOnClick(
                 "https://www.linkedin.com/in/matthew-tze-ken-fung-01736b270/"
@@ -117,6 +118,9 @@ export const Hero = () => {
           whileHover={{ y: -5 }}
           whileTap={{ y: 5 }}
           className="inline bg-primary-light rounded-full py-2 px-4 mt-6 shadow-lg"
+          onClick={() => {
+            window.open("/Fung_Matthew_Tze_Ken_Resume_(IT)_2023.pdf", "_blank");
+          }}
         >
           <div className="flex justify-center items-center gap-2">
             <span>Get My Resume</span>

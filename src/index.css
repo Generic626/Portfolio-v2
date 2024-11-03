@@ -7,3 +7,7 @@
     @apply bg-primary;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

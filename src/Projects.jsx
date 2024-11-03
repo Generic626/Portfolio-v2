@@ -4,7 +4,10 @@ import projectList from "./data/project";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col justify-center items-center w-full p-8 bg-primary-light">
+    <section
+      id="projects"
+      className="flex flex-col justify-center items-center w-full p-8 bg-primary-light"
+    >
       {/* Title */}
       <span className="text-xl my-2 font-bold">Projects</span>
 
@@ -22,7 +25,7 @@ const Projects = () => {
               title={project.title}
               description={project.description}
               projectUrl={project.projectUrl}
-              reversed={true}
+              reversed={false}
             >
               {badges}
             </ProjectCard>

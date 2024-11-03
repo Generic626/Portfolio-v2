@@ -4,7 +4,7 @@ const Badge = (props) => {
   return (
     <div className="cursor-pointer ">
       <Tooltip title={props.text} arrow>
-        <div className="bg-primary-light rounded-full px-4 py-2 w-fit">
+        <div className="bg-primary-lighter rounded-full px-4 py-2 w-fit">
           <img className="size-[15px]" src={props.img} />
         </div>
       </Tooltip>
