@@ -44,7 +44,7 @@ export const Hero = () => {
       className="h-full w-full p-4 flex flex-col justify-center items-center"
     >
       {/* Avatar Image */}
-      <div
+      <motion.div
         ref={imageRef}
         onMouseEnter={() => {
           setHasEntered(true);
@@ -60,6 +60,15 @@ export const Hero = () => {
             });
           }
         }}
+        initial={{
+          opacity: 0,
+          y: -100,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{ duration: 0.8 }}
         className="relative cursor-pointer border-[4px] border-white rounded-[50%] w-[200px] h-[200px] bg-highlight flex justify-center items-center"
       >
         <img src="/assets/avatar.png" />
@@ -80,10 +89,21 @@ export const Hero = () => {
             Hello There 👋
           </motion.div>
         )}
-      </div>
+      </motion.div>
 
       {/* Title */}
-      <div className="text-center mt-4">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 100,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-center mt-4"
+      >
         <h1 className="text-4xl lg:text-6xl mt-4 font-normal">
           My Name is Matthew
         </h1>
@@ -111,7 +131,7 @@ export const Hero = () => {
 
         {/* Get Resume */}
         <motion.button
-          whileHover={{ y: -5 }}
+          whileHover={{ y: -8 }}
           whileTap={{ y: 5 }}
           className="inline bg-primary-light rounded-full py-2 px-4 mt-6 shadow-lg"
           onClick={() => {
@@ -123,7 +143,7 @@ export const Hero = () => {
             <GoDownload />
           </div>
         </motion.button>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

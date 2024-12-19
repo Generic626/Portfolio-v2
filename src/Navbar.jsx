@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import Logo from "./UI/Logo";
 
 const Navbar = () => {
@@ -8,33 +9,25 @@ const Navbar = () => {
         <Logo />
       </a>
       {/* Nav Items */}
-      <div className="hidden lg:flex gap-8 uppercase">
-        <a
-          href="#about"
-          className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150"
-        >
-          About Me
-        </a>
-        <a
-          href="#experience"
-          className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150"
-        >
-          Career
-        </a>
-        <a
-          href="#projects"
-          className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150"
-        >
-          Projects
-        </a>
-        <a className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150">
-          Let&apos;s Connect
-        </a>
-      </div>
-      {/* Some kind of button */}
-      {/* <button className="hidden md:inline bg-primary-dark rounded-md py-2 px-4">
-        Get My Resume
-      </button> */}
+      <ul className="hidden lg:flex gap-8 uppercase">
+        <Link to="about" smooth={true} offset={-80} duration={500}>
+          <li className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150">
+            About Me
+          </li>
+        </Link>
+
+        <Link to="experience" smooth={true} offset={-80} duration={500}>
+          <li className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150">
+            Career
+          </li>
+        </Link>
+
+        <Link to="projects" smooth={true} offset={-70} duration={500}>
+          <li className="text-zinc-400 cursor-pointer hover:text-zinc-200 ease-in duration-150">
+            Projects
+          </li>
+        </Link>
+      </ul>
     </nav>
   );
 };

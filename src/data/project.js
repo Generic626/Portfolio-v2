@@ -12,6 +12,18 @@ const projectList = [
     ],
   },
   {
+    projectImg: "/projects/capstone.png",
+    title: "CodeRoom - RT Code Editor",
+    description:
+      "This project was used for my final year capstone project. This is a online code editing platform that teachers could share and create different code editors to their students and code in real time.",
+    projectUrl: "",
+    badges: [
+      { text: "React", img: "/tech/react.png" },
+      { text: "Tailwind", img: "/tech/tailwind.png" },
+      { text: "MongoDB", img: "/tech/mongo.png" },
+    ],
+  },
+  {
     projectImg: "/projects/work-aloud-clone.png",
     title: "Worklouder Clone",
     description:
@@ -55,6 +67,7 @@ const projectList = [
     projectUrl: "https://www.kimiya.ai/",
     badges: [
       { text: "Remix", img: "/tech/remix.png" },
+      { text: "React", img: "/tech/react.png" },
       { text: "Tailwind", img: "/tech/tailwind.png" },
       { text: "GraphQL", img: "/tech/graphQL.png" },
     ],

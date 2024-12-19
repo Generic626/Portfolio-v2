@@ -108,7 +108,7 @@ const NormalOrientationCardV2 = (props) => {
           <img
             onClick={props.handleOnClick}
             src={props.projectImg}
-            className="cursor-pointer h-[200px] rounded-t-lg object-cover shadow-xl  border-[0.5px] border-black"
+            className="cursor-pointer h-[200px] object-fit shadow-xl  border-[0.5px] border-black"
           />
         </div>
 
